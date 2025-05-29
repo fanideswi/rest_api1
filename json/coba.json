@@ -1,0 +1,33 @@
+[
+{
+    "nama" : "Fani Deswi Sapitri Tambunan",
+    "umur" : 21,
+    "nim"  : "2217020011",
+    "lulus": true,
+    "hobby": [
+        "traveling",
+        "olahraga"
+    ],
+
+    "pembimbing" : {
+        "pembimbing1" : "Arfansyah",
+        "pembimbing2" : "Iqbal Ramadhan"
+    }
+},
+
+{
+    "nama" : "Fani Deswi Sapitri Tambunan",
+    "umur" : 21,
+    "nim"  : "2217020011",
+    "lulus": true,
+    "hobby": [
+        "traveling",
+        "olahraga"
+    ],
+
+    "pembimbing" : {
+        "pembimbing1" : "Arfansyah",
+        "pembimbing2" : "Iqbal Ramadhan"
+    }
+}
+]
