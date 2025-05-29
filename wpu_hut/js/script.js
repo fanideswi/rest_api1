@@ -1,3 +1,4 @@
+function tampilkanSemuaMenu() {
 $.getJSON('data/pizza.json', function (data){
         let menu = data.menu;
         let content = '';
@@ -8,6 +9,8 @@ $.getJSON('data/pizza.json', function (data){
         });
         $('#daftar-menu').html(content);
     });
+}
+tampilkanSemuaMenu ();
 
     $('.nav-link').on('click', function () {
     $('.nav-link').removeClass('active');
@@ -15,6 +18,11 @@ $.getJSON('data/pizza.json', function (data){
 
     let kategori = $(this).html();
     $('h1').html(kategori);
+
+    if( kategori == 'All Menu' ) {
+    tampilkanSemuaMenu();
+    return;
+    }
 
     $.getJSON('data/pizza.json',function (data) {
     let menu = data.menu;
