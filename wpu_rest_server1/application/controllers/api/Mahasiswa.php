@@ -1,14 +1,14 @@
 <?php
 
-use Restserver\Libraries\REST_Controller;
-
-defined('BASEPATH') OR exit('No direct script access allowed');
+    defined('BASEPATH') OR exit('No direct script access allowed');
 
 require APPPATH . 'libraries/REST_Controller.php';
 require APPPATH . 'libraries/Format.php';
 
-class Mahasiswa extends REST_Controller 
-{
+use Restserver\Libraries\REST_Controller;
+
+class Mahasiswa extends REST_Controller {
+
     public function __construct()
     {
         parent::__construct();
@@ -19,22 +19,95 @@ class Mahasiswa extends REST_Controller
     {
         $id = $this->get('id');
         if ($id === null) {
-            $mahasiswa =$this->mahasiswa->getMahasiswa();
+            $mahasiswa = $this->mahasiswa->getMahasiswa();
         } else {
-            $mahasiswa =$this->mahasiswa->getMahasiswa($id);
-
+            $mahasiswa = $this->mahasiswa->getMahasiswa($id);
         }
 
-        if($mahasiswa){
+        if ($mahasiswa) {
             $this->response([
-                    'status' => true,
-                    'data' => $mahasiswa
-                ], REST_Controller::HTTP_OK); 
+                'status' => true,
+                'data' => $mahasiswa
+            ], REST_Controller::HTTP_OK);
         } else {
             $this->response([
+                'status' => false,
+                'message' => 'Data tidak ditemukan'
+            ], REST_Controller::HTTP_NOT_FOUND);
+        }
+    }
+
+    public function index_delete()
+    {
+        $id = $this->delete('id');
+        if ($id === null) {
+            $this->response([
+                'status' => false,
+                'message' => 'ID wajib diisi'
+            ], REST_Controller::HTTP_BAD_REQUEST);
+        } else {
+            if ($this->mahasiswa->deleteMahasiswa($id) > 0) {
+                $this->response([
+                    'status' => true,
+                    'id' => $id,
+                    'message' => 'Data berhasil dihapus'
+                ], REST_Controller::HTTP_NO_CONTENT);
+            } else {
+                $this->response([
                     'status' => false,
-                    'message' => 'id not found'
-                ], REST_Controller::HTTP_NOT_FOUND); 
+                    'message' => 'ID tidak ditemukan'
+                ], REST_Controller::HTTP_BAD_REQUEST);
+            }
+        }
+    }
+
+    public function index_post()
+    {
+        $data = [
+            'nrp' => $this->post('nrp'),
+            'nama' => $this->post('nama'),
+            'email' => $this->post('email'),
+            'jurusan' => $this->post('jurusan')
+        ];
+
+        if ($data['jurusan'] === null) {
+            return $this->response([
+                'status' => false,
+                'message' => 'Jurusan tidak boleh kosong'
+            ], REST_Controller::HTTP_BAD_REQUEST);
+        }
+
+        if ($this->mahasiswa->createMahasiswa($data) > 0) {
+            $this->response([
+                'status' => true,
+                'message' => 'Data mahasiswa berhasil ditambahkan'
+            ], REST_Controller::HTTP_CREATED);
+        } else {
+            $this->response([
+                'status' => false,
+                'message' => 'Gagal menambahkan data mahasiswa'
+            ], REST_Controller::HTTP_BAD_REQUEST);
+        }
+    }
+    public function index_put()
+    {   $id = $this->put('id');
+         $data = [
+            'nrp' => $this->put('nrp'),
+            'nama' => $this->put('nama'),
+            'email' => $this->put('email'),
+            'jurusan' => $this->put('jurusan')
+        ];
+
+        if ($this->mahasiswa->updateMahasiswa($data, $id) > 0) {
+            $this->response([
+                'status' => true,
+                'message' => 'data mahasiswa has been updated.'
+            ], REST_Controller::HTTP_NO_CONTENT);
+        } else {
+            $this->response([
+                'status' => false,
+                'message' => 'failed to update data!'
+            ], REST_Controller::HTTP_BAD_REQUEST);
         }
 
     }
