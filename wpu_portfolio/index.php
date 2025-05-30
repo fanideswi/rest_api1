@@ -22,6 +22,36 @@ $subscriber = $result['items'][0]['statistics']['subscriberCount'];
 $urlLatestVideo = 'https://www.googleapis.com/youtube/v3/search?key=AIzaSyCyonwWpIViudNluB1cgFEyF4QaJnLVFzM&channelId=UC5P2nb8DMBH4QagCGC0vdBw&maxResults=1&order=date&part=snippet';
 $result = get_CURL($urlLatestVideo);
 $LatestVideo = $result ['items'][0]['id']['videoId'];
+
+// instagram api
+ 
+ $clientID = '24093116946960222';
+ $accessToken = 'IGAAJqV6Trj41BZAE9KY0ZAjcFpUTllscUxuRmRGcVdJZAWhQc2VoRlFkZAEI2OU9PZA2ZA3VnF1bXBhTFZAWY0pQeXBPYzBMQzlYREhxR3pWbzBTRHVVaGhqcmNYVG1JeTVyQ0lrUjZAfOHZACZA1FNdFFsal9Jdk1PeDB3UTJTUkdoSUx1ZAwZDZD';
+
+ $result = get_CURL('https://graph.instagram.com/v22.0/me?fields=username,profile_picture_url,followers_count&access_token=IGAAJqV6Trj41BZAE9KY0ZAjcFpUTllscUxuRmRGcVdJZAWhQc2VoRlFkZAEI2OU9PZA2ZA3VnF1bXBhTFZAWY0pQeXBPYzBMQzlYREhxR3pWbzBTRHVVaGhqcmNYVG1JeTVyQ0lrUjZAfOHZACZA1FNdFFsal9Jdk1PeDB3UTJTUkdoSUx1ZAwZDZD');
+ $usernameIG = $result['username'];
+ $profilPictureIG = $result ['profile_picture_url'];
+ $followersIG = $result ['followers_count'];
+
+//  ig post
+$result = get_CURL('https://graph.instagram.com/me/media?fields=id,media_type,media_url&access_token=IGAAJqV6Trj41BZAE9KY0ZAjcFpUTllscUxuRmRGcVdJZAWhQc2VoRlFkZAEI2OU9PZA2ZA3VnF1bXBhTFZAWY0pQeXBPYzBMQzlYREhxR3pWbzBTRHVVaGhqcmNYVG1JeTVyQ0lrUjZAfOHZACZA1FNdFFsal9Jdk1PeDB3UTJTUkdoSUx1ZAwZDZD');
+
+$photos = [];
+
+if (isset($result['data']) && is_array($result['data'])) {
+    foreach ($result['data'] as $media) {
+        // Filter media_type image
+        if ($media['media_type'] == 'IMAGE' || $media['media_type'] == 'CAROUSEL_ALBUM') {
+            $photos[] = $media['media_url'];
+        }
+    }
+} else {
+    echo "<pre>";
+    print_r($result);
+    echo "</pre>";
+}
+
+
 ?>
 
 <!doctype html>
@@ -127,24 +157,20 @@ $LatestVideo = $result ['items'][0]['id']['videoId'];
             <div class="col-md-5">
         <div class="row">
           <div class="col-md-4">
-            <img src="img/profile1.png" width="200" class="rounded-circle img-thumbnail">
+            <img src="<?= $profilPictureIG ?>" width="200" class="rounded-circle img-thumbnail">
           </div>
-                   <div class="col-md-8">
-            <h5>@siskafanya</h5>
-            <p>1000 Followers.</p>
+            <div class="col-md-8">
+            <h5><?= $usernameIG; ?></h5>
+            <p><?= $followersIG; ?> Followers.</p>
           </div>
         </div>
         <div class="row mt-3 pb-3">
           <div class="col">
+            <?php foreach ($photos as $photo) : ?>
             <div class="ig-thumbnail">
-              <img src="img/thumbs/1.png">
-            </div>
-            <div class="ig-thumbnail">
-              <img src="img/thumbs/1.png">
+              <img src="<?= $photo; ?>">
             </div> 
-            <div class="ig-thumbnail">
-              <img src="img/thumbs/1.png">
-            </div> 
+            <?php endforeach; ?>
             </div>
           </div>
         </div>
