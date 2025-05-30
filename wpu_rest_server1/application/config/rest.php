@@ -301,6 +301,7 @@ $config['rest_database_group'] = 'default';
 */
 $config['rest_keys_table'] = 'keys';
 
+
 /*
 |--------------------------------------------------------------------------
 | REST Enable Keys
@@ -324,7 +325,7 @@ $config['rest_keys_table'] = 'keys';
 |   ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 |
 */
-$config['rest_enable_keys'] = FALSE;
+$config['rest_enable_keys'] = true;
 
 /*
 |--------------------------------------------------------------------------
