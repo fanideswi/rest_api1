@@ -43,7 +43,7 @@ $LatestVideo = $result ['items'][0]['id']['videoId'];
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="#home">Sandhika Galih</a>
+        <a class="navbar-brand" href="#home"> FANI TAMBUNAN</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -68,7 +68,7 @@ $LatestVideo = $result ['items'][0]['id']['videoId'];
       <div class="container">
         <div class="text-center">
           <img src="img/profile1.png" class="rounded-circle img-thumbnail">
-          <h1 class="display-4">Sandhika Galih</h1>
+          <h1 class="display-4">FANI TAMBUNAN</h1>
           <h3 class="lead">Lecturer | Programmer | Youtuber</h3>
         </div>
       </div>
@@ -111,7 +111,7 @@ $LatestVideo = $result ['items'][0]['id']['videoId'];
             <img src="<?= $youtubeProfilePic; ?>" width="200" class="rounded-circle img-thumbnail">
           </div>
           <div class="col-md-8">
-            <h5><?= $channelName; ?>I</h5>
+            <h5><?= $channelName; ?></h5>
             <p><?= $subscriber; ?> Subscribers. </p>
             <div class="g-ytsubscribe" data-channelid="UC5P2nb8DMBH4QagCGC0vdBw" data-layout="default" data-count="default"></div>
           </div>
@@ -119,7 +119,7 @@ $LatestVideo = $result ['items'][0]['id']['videoId'];
         <div class="row mt-3 pb-3">
           <div class="col">
             <div class="embed-responsive embed-responsive-16by9">
-              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/<?= $LatestVideo?>rel=0" allowfullscreen></iframe>
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/<?= $LatestVideo?>?rel=0" allowfullscreen></iframe>
             </div>
           </div>
         </div>
