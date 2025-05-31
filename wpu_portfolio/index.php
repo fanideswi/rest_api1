@@ -86,8 +86,11 @@ if (isset($result['data']) && is_array($result['data'])) {
               <a class="nav-link" href="#about">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#portfolio">Portfolio</a>
+              <a class="nav-link" href="#portfolio">Project</a>
             </li>
+            <li class="nav-item">
+   
+            <a class="nav-link" href="#portfolio">Portfolio</a>
           </ul>
         </div>
       </div>
@@ -97,9 +100,9 @@ if (isset($result['data']) && is_array($result['data'])) {
     <div class="jumbotron" id="home">
       <div class="container">
         <div class="text-center">
-          <img src="img/profile1.png" class="rounded-circle img-thumbnail">
+          <img src="img/profile3.jpg" class="rounded-circle img-thumbnail">
           <h1 class="display-4">FANI TAMBUNAN</h1>
-          <h3 class="lead">Lecturer | Programmer | Youtuber</h3>
+          <h3 class="lead"> Student of Sistem Informasi</h3>
         </div>
       </div>
     </div>
@@ -115,10 +118,10 @@ if (isset($result['data']) && is_array($result['data'])) {
         </div>
         <div class="row justify-content-center">
           <div class="col-md-5">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, molestiae sunt doloribus error ullam expedita cumque blanditiis quas vero, qui, consectetur modi possimus. Consequuntur optio ad quae possimus, debitis earum.</p>
+            <p>Saya adalah mahasiswa aktif di Universitas Islam Negeri (UIN) Imam Bonjol Padang, Fakultas Sains dan Teknologi, dengan program studi Sistem Informasi. Saat ini, saya sedang menjalani proses pembelajaran yang berfokus pada pengembangan sistem informasi berbasis teknologi serta analisis data dan pemrograman. Kuliah di UIN Imam Bonjol memberikan saya kesempatan untuk memperdalam ilmu di bidang teknologi informasi sekaligus memperkuat nilai-nilai keislaman dalam kehidupan akademik dan sosial.</p>
           </div>
           <div class="col-md-5">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, molestiae sunt doloribus error ullam expedita cumque blanditiis quas vero, qui, consectetur modi possimus. Consequuntur optio ad quae possimus, debitis earum.</p>
+            <p>Saya berasal dari Medan, Sumatera Utara. Sebagai pribadi yang terbiasa hidup di kota besar, saya tumbuh dengan semangat belajar yang tinggi dan adaptif terhadap perubahan. Saya memiliki minat besar dalam dunia teknologi, terutama dalam pengembangan sistem berbasis web dan analisis data. Selain itu, saya juga aktif mengikuti berbagai kegiatan organisasi dan pengembangan diri untuk meningkatkan soft skill dan memperluas jaringan pertemanan.</p>
           </div>
         </div>
       </div>
@@ -180,57 +183,80 @@ if (isset($result['data']) && is_array($result['data'])) {
 </section>
 
 
-    <!-- Portfolio -->
-    <section class="portfolio bg-light" id="portfolio">
-      <div class="container">
-        <div class="row pt-4 mb-4">
-          <div class="col text-center">
-            <h2>Portfolio</h2>
+<!-- project -->
+<section class="portfolio bg-light" id="portfolio">
+  <div class="container">
+    <div class="row pt-4 mb-4">
+      <div class="col text-center">
+        <h2>Project</h2>
+      </div>
+    </div>
+    <div class="row">
+      <!-- Card 1 -->
+      <div class="col-md mb-4">
+        <div class="card">
+          <img class="card-img-top" src="img/thumbs/1_.png" alt="Card image cap">
+          <div class="card-body text-center">
+            <p class="card-text">Project Pizza merupakan aplikasi pemesanan pizza sederhana yang saya bangun dengan menggunakan JSON sebagai format penyimpanan dan pertukaran data menu serta detail pesanan.</p>
+            <button type="button" class="btn btn-primary custom-button">Project Pizza</button>
           </div>
         </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md mb-4">
+        <div class="card">
+          <img class="card-img-top" src="img/thumbs/2_.png" alt="Card image cap">
+          <div class="card-body text-center">
+            <p class="card-text">Project API Movie menampilkan detail film seperti judul, tanggal rilis, genre, sutradara, dan aktor ketika pengguna mengklik salah satu film.</p>
+            <button type="button" class="btn btn-primary custom-button">Project API Movie</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md mb-4">
+        <div class="card">
+          <img class="card-img-top" src="img/thumbs/3_.png" alt="Card image cap">
+          <div class="card-body text-center">
+            <p class="card-text">Project Rest Client adalah aplikasi yang menggunakan Guzzle sebagai HTTP client melalui Composer untuk terhubung ke REST API, memungkinkan pengguna menambah, menghapus, dan mengupdate data secara dinamis dengan mudah dan efisien.</p>
+            <button type="button" class="btn btn-primary custom-button">Project Rest Client</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .custom-button {
+    color: black !important; /* Warna teks tombol hitam */
+  }
+</style>
+
+
+<!-- Portfolio -->
+      <section class="portfolio bg-light" id="portfolio">
+        <div class="container">
+          <div class="row pt-4 mb-4">
+            <div class="col text-center">
+              <h2>Portfolio</h2>
+            </div>
+          </div>
         <div class="row">
           <div class="col-md mb-4">
             <div class="card">
-              <img class="card-img-top" src="img/thumbs/1.png" alt="Card image cap">
+              <img class="card-img-top" src="img/thumbs/4_.png" alt="Card image cap">
               <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md mb-4">
-            <div class="card">
-              <img class="card-img-top" src="img/thumbs/2.png" alt="Card image cap">
-              <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md mb-4">
-            <div class="card">
-              <img class="card-img-top" src="img/thumbs/3.png" alt="Card image cap">
-              <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              </div>
-            </div>
-          </div>   
-        </div>
-
-        <div class="row">
-          <div class="col-md mb-4">
-            <div class="card">
-              <img class="card-img-top" src="img/thumbs/4.png" alt="Card image cap">
-              <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <p class="card-text">Perkenalkan, saya adalah mahasiswa yang selalu berusaha terlihat sibuk, meskipun kadang kenyataannya sedang menunggu ilham datang lewat notifikasi grup WhatsApp.</p>
               </div>
             </div>
           </div> 
           <div class="col-md mb-4">
             <div class="card">
-              <img class="card-img-top" src="img/thumbs/5.png" alt="Card image cap">
+              <img class="card-img-top" src="img/thumbs/5_.png" alt="Card image cap">
               <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
+                <p class="card-text">Dalam dunia perkuliahan, saya memiliki prinsip: jika tidak paham, maka cari teman yang paham.Saya juga mempunyai skill utama yang tidak diajarkan di silabus:bertahan hidup di tengah deadline bertubi-tubi.
                 </p>
               </div>
             </div>
@@ -238,9 +264,9 @@ if (isset($result['data']) && is_array($result['data'])) {
 
           <div class="col-md mb-4">
             <div class="card">
-              <img class="card-img-top" src="img/thumbs/6.png" alt="Card image cap">
+              <img class="card-img-top" src="img/thumbs/6_.png" alt="Card image cap">
               <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <p class="card-text">Di luar dunia akademik, saya aktif dalam organisasi kampus, meskipun lebih sering terlihat sibuk mengatur rapat daripada benar-benar rapat. </p>
               </div>
             </div>
           </div>
@@ -263,15 +289,15 @@ if (isset($result['data']) && is_array($result['data'])) {
             <div class="card bg-primary text-white mb-4 text-center">
               <div class="card-body">
                 <h5 class="card-title">Contact Me</h5>
-                <p class="card-text">Hubungi kami untuk informasi produk, pemesanan, atau pertanyaan lainnya. Kami siap membantu Anda!.</p>
+                <p class="card-text">Hubungi saya jika kamu sudah siap untuk menikah hahah.</p>
               </div>
             </div>
             
             <ul class="list-group mb-4">
               <li class="list-group-item"><h3>Location</h3></li>
-              <li class="list-group-item">My Office, Fani Tambunan</li>
-              <li class="list-group-item">JL Besar Buntu Maraja, Sumatera Utara</li>
-              <li class="list-group-item">West Java, Indonesia</li>
+              <li class="list-group-item">My Office</li>
+              <li class="list-group-item">JL Besar Buntu Maraja</li>
+              <li class="list-group-item">West Sumatera, Indonesia</li>
             </ul>
           </div>
 
