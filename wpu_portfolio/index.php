@@ -86,11 +86,10 @@ if (isset($result['data']) && is_array($result['data'])) {
               <a class="nav-link" href="#about">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#portfolio">Project</a>
+              <a class="nav-link" href="#project">Project</a>
             </li>
             <li class="nav-item">
-   
-            <a class="nav-link" href="#portfolio">Portfolio</a>
+             <a class="nav-link" href="#portfolio">Portfolio</a>
           </ul>
         </div>
       </div>
@@ -129,7 +128,7 @@ if (isset($result['data']) && is_array($result['data'])) {
 
 
 <!-- yotube dan IG -->
-
+ 
 <section class= "social bg-light" id="social">
   <div class="container">
     <div class="row pt-4 mb-4">
@@ -184,21 +183,22 @@ if (isset($result['data']) && is_array($result['data'])) {
 
 
 <!-- project -->
-<section class="portfolio bg-light" id="portfolio">
+<section class="project bg-light" id="project">
   <div class="container">
     <div class="row pt-4 mb-4">
       <div class="col text-center">
         <h2>Project</h2>
       </div>
     </div>
-    <div class="row">
+    <div class="row justify-content-center">
       <!-- Card 1 -->
       <div class="col-md mb-4">
         <div class="card">
           <img class="card-img-top" src="img/thumbs/1_.png" alt="Card image cap">
           <div class="card-body text-center">
+            <h5 class="card-title">Menu Hut</h5>
             <p class="card-text">Project Pizza merupakan aplikasi pemesanan pizza sederhana yang saya bangun dengan menggunakan JSON sebagai format penyimpanan dan pertukaran data menu serta detail pesanan.</p>
-            <button type="button" class="btn btn-primary custom-button">Project Pizza</button>
+              <a href="http://localhost/rest_api1/wpu_hut/latihan2.html" class="btn btn-primary" target="_blank">View Project</a>
           </div>
         </div>
       </div>
@@ -208,8 +208,9 @@ if (isset($result['data']) && is_array($result['data'])) {
         <div class="card">
           <img class="card-img-top" src="img/thumbs/2_.png" alt="Card image cap">
           <div class="card-body text-center">
+              <h5 class="card-title">Movie</h5>
             <p class="card-text">Project API Movie menampilkan detail film seperti judul, tanggal rilis, genre, sutradara, dan aktor ketika pengguna mengklik salah satu film.</p>
-            <button type="button" class="btn btn-primary custom-button">Project API Movie</button>
+              <a href="http://localhost/rest_api1/wpu_movie" class="btn btn-primary" target="_blank">View Project</a>
           </div>
         </div>
       </div>
@@ -219,8 +220,9 @@ if (isset($result['data']) && is_array($result['data'])) {
         <div class="card">
           <img class="card-img-top" src="img/thumbs/3_.png" alt="Card image cap">
           <div class="card-body text-center">
+            <h5 class="card-title">Rest Client</h5>
             <p class="card-text">Project Rest Client adalah aplikasi yang menggunakan Guzzle sebagai HTTP client melalui Composer untuk terhubung ke REST API, memungkinkan pengguna menambah, menghapus, dan mengupdate data secara dinamis dengan mudah dan efisien.</p>
-            <button type="button" class="btn btn-primary custom-button">Project Rest Client</button>
+              <a href="http://localhost/rest_api1/wpu_movie" class="btn btn-primary" target="_blank">View Project</a>
           </div>
         </div>
       </div>
@@ -230,7 +232,7 @@ if (isset($result['data']) && is_array($result['data'])) {
 
 <style>
   .custom-button {
-    color: black !important; /* Warna teks tombol hitam */
+    color: black !important;
   }
 </style>
 
