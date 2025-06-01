@@ -222,7 +222,7 @@ if (isset($result['data']) && is_array($result['data'])) {
           <div class="card-body text-center">
             <h5 class="card-title">Rest Client</h5>
             <p class="card-text">Project Rest Client adalah aplikasi yang menggunakan Guzzle sebagai HTTP client melalui Composer untuk terhubung ke REST API, memungkinkan pengguna menambah, menghapus, dan mengupdate data secara dinamis dengan mudah dan efisien.</p>
-              <a href="http://localhost/rest_api1/wpu_movie" class="btn btn-primary" target="_blank">View Project</a>
+              <a href="http://localhost/rest_api1/wpu_rest_client/mahasiswa" class="btn btn-primary" target="_blank">View Project</a>
           </div>
         </div>
       </div>
